@@ -203,8 +203,6 @@ skip_missing_interpreters = true
 
 [gh-actions]
 python =
-    3.8: py38
-    3.9: py39
     3.10: py310
     3.11: py311
     pypy-3.10: pypy3
