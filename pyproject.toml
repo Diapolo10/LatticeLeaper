@@ -13,12 +13,12 @@ omit = [
 
 
 [tool.poetry]
-name = 'project-name'
+name = 'LatticeLeaper'
 version = '0.1.0'
 description = "A template Poetry project structure."
 
 packages = [
-    { include = 'project_name', from = 'src' },
+    { include = 'lattice_leaper', from = 'src' },
 ]
 
 authors = ["Lari Liuhamo <lari.liuhamo+pypi@gmail.com>",]
@@ -28,9 +28,9 @@ include = ['CHANGELOG.md', 'LICENSE', 'py.typed',]
 license = 'MIT'
 readme = 'README.md'
 
-homepage = 'https://pypi.org/project/project-name/'
-repository = 'https://github.com/Diapolo10/project-name'
-documentation = 'https://github.com/Diapolo10/project-name/tree/main/docs'
+homepage = 'https://pypi.org/project/LatticeLeaper/'
+repository = 'https://github.com/Diapolo10/LatticeLeaper'
+documentation = 'https://github.com/Diapolo10/LatticeLeaper/tree/main/docs'
 
 keywords = [
     'python3',
@@ -51,7 +51,8 @@ classifiers = [
 
 
 [tool.poetry.dependencies]
-python = '^3.8.1'
+python = '^3.10.0'
+escapyde = '^1.0.1'
 
 
 [tool.poetry.group.dev.dependencies]
@@ -78,8 +79,8 @@ tox-gh-actions = '^3.1.3'
 
 
 [tool.poetry.urls]
-"Tracker" = 'https://github.com/Diapolo10/project-name/issues'
-"Changelog" = 'https://github.com/Diapolo10/project-name/blob/main/CHANGELOG.md'
+"Tracker" = 'https://github.com/Diapolo10/LatticeLeaper/issues'
+"Changelog" = 'https://github.com/Diapolo10/LatticeLeaper/blob/main/CHANGELOG.md'
 
 
 [tool.pytest.ini_options]
@@ -163,7 +164,7 @@ line-length = 120
 # preview = true
 show-fixes = true
 src = ['src',]
-target-version = 'py38'
+target-version = 'py310'
 
 
 [tool.ruff.flake8-quotes]
@@ -180,6 +181,7 @@ max-complexity = 10
 # https://beta.ruff.rs/docs/rules/
 '__init__.py' = ['F401','F403','F405',]
 'tests/*' = ['ANN', 'ARG', 'INP001', 'S101',]
+'main.py' = ['T201',]
 
 
 [tool.ruff.pylint]
