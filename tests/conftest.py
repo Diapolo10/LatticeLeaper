@@ -7,13 +7,13 @@ import pytest
 TEST_MAZES = Path(__file__).parent / 'mazes'
 
 
-@pytest.fixture()
+@pytest.fixture
 def mazes():
     """Fetch mazes from the test maze directory."""
     return list(TEST_MAZES.glob('*.txt'))
 
 
-@pytest.fixture()
+@pytest.fixture
 def parsed_maze():
     """Maze."""
     return [
@@ -41,19 +41,19 @@ def parsed_maze():
     ]
 
 
-@pytest.fixture()
+@pytest.fixture
 def maze_no_start():
     """Fetch an invalid maze, missing a starting point."""
     return TEST_MAZES / 'maze.nostart'
 
 
-@pytest.fixture()
+@pytest.fixture
 def maze_no_exit():
     """Fetch an invalid maze, missing a starting point."""
     return TEST_MAZES / 'maze.noexit'
 
 
-@pytest.fixture()
+@pytest.fixture
 def parsed_maze_no_start():
     """Maze, no start."""
     return [
