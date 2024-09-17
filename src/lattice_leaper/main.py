@@ -28,7 +28,10 @@ def main() -> None:
             except ValueError:
                 print("    No viable path found.")
             else:
-                print(f"    The shortest route between {CHARACTER_NAME} and an exit is {len(shortest_route)} steps, with the following solution:")
+                print(
+                    f"    The shortest route between {CHARACTER_NAME} and an exit is {len(shortest_route)}"
+                     " steps, with the following solution:",
+                )
                 print(render_heatmap(maze=maze, heatmap=shortest_route, indent=6))
 
             print(f"\n    The following areas can reach the exit in {allowed_steps} steps:")
