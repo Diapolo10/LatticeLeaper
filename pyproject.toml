@@ -1,15 +1,12 @@
 [build-system]
-requires = ['poetry-core>=1.2.0', 'wheel',]
+requires = ['poetry-core>=1.2.0', 'wheel']
 build-backend = 'poetry.core.masonry.api'
 
 
 [tool.coverage.run]
 branch = true
 relative_files = true
-omit = [
-    '.tox/*',
-    'tests/*',
-]
+omit = ['.tox/*', 'tests/*']
 
 
 [tool.poetry]
@@ -17,12 +14,10 @@ name = 'LatticeLeaper'
 version = '0.1.0'
 description = "A template Poetry project structure."
 
-packages = [
-    { include = 'lattice_leaper', from = 'src' },
-]
+packages = [{ include = 'lattice_leaper', from = 'src' }]
 
-authors = ["Lari Liuhamo <lari.liuhamo+pypi@gmail.com>",]
-maintainers = ["Lari Liuhamo <lari.liuhamo+pypi@gmail.com>",]
+authors = ["Lari Liuhamo <lari.liuhamo+pypi@gmail.com>"]
+maintainers = ["Lari Liuhamo <lari.liuhamo+pypi@gmail.com>"]
 
 include = []
 license = 'MIT'
@@ -32,9 +27,7 @@ homepage = 'https://pypi.org/project/LatticeLeaper/'
 repository = 'https://github.com/Diapolo10/LatticeLeaper'
 documentation = 'https://github.com/Diapolo10/LatticeLeaper/tree/main/docs'
 
-keywords = [
-    'python3',
-]
+keywords = ['python3']
 classifiers = [
     'Development Status :: 3 - Alpha',
     'License :: OSI Approved :: MIT License',
@@ -72,6 +65,7 @@ optional = true
 
 
 [tool.poetry.group.tests.dependencies]
+pygments = '^2.21.0'
 pytest = '^9.0.3'
 pytest-cov = '^7.1.0'
 tox = '^4.52.1'
@@ -93,14 +87,12 @@ addopts = """
 --cov-report xml:tests/reports/coverage.xml \
 --ignore=docs/
 """
-testpaths = [
-    'tests',
-]
+testpaths = ['tests']
 
 
 [tool.ruff]
 lint.select = [
-    "A",     # Builtins
+    "A", # Builtins
     # "AIR",   # Airflow
     "ANN",   # Annotations
     "ARG",   # Unused arguments
@@ -111,56 +103,56 @@ lint.select = [
     "C90",   # mccabe
     "COM",   # Commas
     # "CPY",   # Copyright
-    "D1",    # Undocumented public elements
-    "D2",    # Docstring conventions
-    "D3",    # Triple double quotes
-    "D4",    # Docstring text format
+    "D1", # Undocumented public elements
+    "D2", # Docstring conventions
+    "D3", # Triple double quotes
+    "D4", # Docstring text format
     # "DJ",    # Django
-    "DTZ",   # Datetimes
-    "E",     # Errors
-    "EM",    # Error messages
-    "ERA",   # Commented-out code
-    "EXE",   # Executable
-    "F",     # Pyflakes
-    "FA",    # __future__ annotations
-    "FBT",   # "Boolean trap"
-    "FIX",   # "FIXME"-comments
-    "FLY",   # F-strings
+    "DTZ", # Datetimes
+    "E",   # Errors
+    "EM",  # Error messages
+    "ERA", # Commented-out code
+    "EXE", # Executable
+    "F",   # Pyflakes
+    "FA",  # __future__ annotations
+    "FBT", # "Boolean trap"
+    "FIX", # "FIXME"-comments
+    "FLY", # F-strings
     # "FURB",  # Refurb
-    "G",     # Logging format
-    "I",     # Isort
-    "ICN",   # Import conventions
-    "INP",   # Disallow PEP-420 (Implicit namespace packages)
-    "INT",   # gettext
-    "ISC",   # Implicit str concat
-    "LOG",   # Logging
-    "N",     # PEP-8 Naming
+    "G",   # Logging format
+    "I",   # Isort
+    "ICN", # Import conventions
+    "INP", # Disallow PEP-420 (Implicit namespace packages)
+    "INT", # gettext
+    "ISC", # Implicit str concat
+    "LOG", # Logging
+    "N",   # PEP-8 Naming
     # "NPY",   # Numpy
     # "PD",    # Pandas
-    "PERF",  # Unnecessary performance costs
-    "PGH",   # Pygrep hooks
-    "PIE",   # Unnecessary code
-    "PL",    # Pylint
-    "PT",    # Pytest
-    "PTH",   # Use Pathlib
-    "PYI",   # Stub files
-    "Q",     # Quotes
-    "RET",   # Return
-    "RUF",   # Ruff
-    "RSE",   # Raise
-    "S",     # Bandit
-    "SIM",   # Code simplification
-    "SLF",   # Private member access
-    "SLOT",  # __slots__
-    "T10",   # Debugger
-    "T20",   # Print
-    "TCH",   # Type checking
-    "TD",    # "TODO"-comments
-    "TID",   # Tidy imports
-    "TRY",   # Exception handling
-    "UP",    # Pyupgrade
-    "W",     # Warnings
-    "YTT",   # sys.version
+    "PERF", # Unnecessary performance costs
+    "PGH",  # Pygrep hooks
+    "PIE",  # Unnecessary code
+    "PL",   # Pylint
+    "PT",   # Pytest
+    "PTH",  # Use Pathlib
+    "PYI",  # Stub files
+    "Q",    # Quotes
+    "RET",  # Return
+    "RUF",  # Ruff
+    "RSE",  # Raise
+    "S",    # Bandit
+    "SIM",  # Code simplification
+    "SLF",  # Private member access
+    "SLOT", # __slots__
+    "T10",  # Debugger
+    "T20",  # Print
+    "TCH",  # Type checking
+    "TD",   # "TODO"-comments
+    "TID",  # Tidy imports
+    "TRY",  # Exception handling
+    "UP",   # Pyupgrade
+    "W",    # Warnings
+    "YTT",  # sys.version
 ]
 lint.ignore = [
     "ANN101",  # Type annotation for `self`
@@ -172,7 +164,7 @@ lint.ignore = [
 line-length = 120
 # preview = true
 show-fixes = true
-src = ['src',]
+src = ['src']
 target-version = 'py310'
 
 
@@ -192,9 +184,9 @@ max-complexity = 10
 
 [tool.ruff.lint.per-file-ignores]
 # https://beta.ruff.rs/docs/rules/
-'__init__.py' = ['F401','F403','F405',]
-'tests/*' = ['ANN', 'ARG', 'INP001', 'S101',]
-'main.py' = ['T201',]
+'__init__.py' = ['F401', 'F403', 'F405']
+'tests/*' = ['ANN', 'ARG', 'INP001', 'S101']
+'main.py' = ['T201']
 
 
 [tool.ruff.lint.pylint]
